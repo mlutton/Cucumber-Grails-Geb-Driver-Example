@@ -1,0 +1,15 @@
+Feature: Browsing Amazon Products
+    In order to buy products
+    As an Amazon customer
+    I want to be able to browse products
+
+--Output from Search For Products By Topic--
+  Scenario: Search For Products By Topic                 # features/Amazon.feature:6
+    Given I am on the Amazon homepage                    # AmazonSteps.groovy:16
+    When I search for "clean code"                       # AmazonSteps.groovy:20
+    Then I should see results with the name "clean code" # AmazonSteps.groovy:26
+
+--Output from Browse What Other Users Are Looking At--
+  Scenario: Browse What Other Users Are Looking At        # features/Amazon.feature:11
+    Given I am on the Amazon homepage                     # AmazonSteps.groovy:16
+    Then I should see products other users are looking at # AmazonSteps.groovy:31

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="Michael-Luttons-MacBook-Pro-2.local" id="0" name="Browsing Amazon Products" package="" tests="2" time="28.137" timestamp="2012-11-20T04:25:45">
+      <properties />
+
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Search For Products By Topic" time="11.852" />
+
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Browse What Other Users Are Looking At" time="6.359" />
+
+      <system-out><![CDATA[Feature: Browsing Amazon Products
+    In order to buy products
+    As an Amazon customer
+    I want to be able to browse products
+
+--Output from Search For Products By Topic--
+  Scenario: Search For Products By Topic                 # features/Amazon.feature:6
+    Given I am on the Amazon homepage                    # AmazonSteps.groovy:16
+    When I search for "clean code"                       # AmazonSteps.groovy:20
+    Then I should see results with the name "clean code" # AmazonSteps.groovy:26
+
+--Output from Browse What Other Users Are Looking At--
+  Scenario: Browse What Other Users Are Looking At        # features/Amazon.feature:11
+    Given I am on the Amazon homepage                     # AmazonSteps.groovy:16
+    Then I should see products other users are looking at # AmazonSteps.groovy:31
+]]></system-out>
+
+      <system-err><![CDATA[
+--Output from Search For Products By Topic--
+--Output from Browse What Other Users Are Looking At--]]></system-err>
+
+  </testsuite>
+</testsuites>
